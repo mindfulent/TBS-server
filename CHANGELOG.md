@@ -2,6 +2,22 @@
 
 All notable changes to the TBS-Server modpack.
 
+## [1.0.1] — 2026-05-20
+
+Adds **Simple Voice Chat** — proximity voice chat. 27 metadata entries (was 26).
+
+### Tier S7 — Cross-side
+- **Simple Voice Chat** `2.6.17` *(Modrinth)* — proximity voice chat. Shipped in both packs
+  at the same jar version as TBS-Client; optional per player, so a vanilla client without
+  it still connects and plays. Needs a UDP port open on the Bloom.host server.
+
+### Notes
+- Simple Voice Chat is the second cross-side mod after StreamCraft Live — intentionally
+  relaxing the prior "StreamCraft-only" cross-side rule. Keep its jar version identical
+  across both packs.
+- Modrinth-sourced: CurseForge's `cf install` returns the Bukkit plugin variant for this
+  project, and the Fabric file id could not be pinned reliably.
+
 ## [1.0.0] — 2026-05-20
 
 Initial pack. Minecraft **26.1.2**, Fabric loader **0.19.2**, packwiz format `packwiz:1.1.0`.

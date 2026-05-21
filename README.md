@@ -18,8 +18,10 @@ The base server is vanilla 26.1.2. Every server mod must either:
 2. **Translate new content into vanilla packets** via a library like Polymer. v1.0 ships no
    mods of this kind.
 
-**StreamCraft Live** is the only mod shared with TBS-Client, shipped at the same version on
-both sides. See `docs/TBS-mod-strategy.md` for the full design.
+Two mods are shared with TBS-Client — **StreamCraft Live** and **Simple Voice Chat** —
+each shipped at the same version on both sides. Both are optional per player: a vanilla
+client without them still connects and plays. See `docs/TBS-mod-strategy.md` for the full
+design.
 
 ## Deploy
 
@@ -65,7 +67,7 @@ for the full design rationale.
 - **Tier S5 — Gameplay augmentation (vanilla-packet-only):** Better Server Sleep, Lootr,
   FallingTree, Saplanting, Universal Bone Meal, Trade Cycling
 - **Tier S6 — Discoverability:** BlueMap
-- **Tier S7 — Cross-side:** StreamCraft Live
+- **Tier S7 — Cross-side:** StreamCraft Live, Simple Voice Chat
 
 ## Pending mods
 
@@ -92,6 +94,6 @@ which are installed. Confirm whether a separate bridge mod is still wanted.
 
 ## Version coupling
 
-TBS-Client and TBS-Server versions are **decoupled** — the only mod whose version must match
-across both packs is **StreamCraft Live**. Coordinate StreamCraft bumps as a synchronized
-release of both packs.
+TBS-Client and TBS-Server versions are **decoupled** — the mods whose versions must match
+across both packs are **StreamCraft Live** and **Simple Voice Chat**. Coordinate bumps of
+either as a synchronized release of both packs.

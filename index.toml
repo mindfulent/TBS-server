@@ -2,11 +2,11 @@ hash-format = "sha256"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "6d1077b3e4f254992d263dbb88d8ef96850aacb2220961a362d19deb35f34c5f"
+hash = "b91640bd346fce1a25737aaa31233cc63af3cbd7fe307c98ff9b2cb4e95a5f75"
 
 [[files]]
 file = "README.md"
-hash = "302794b62f6029f8bb7fbbfb45f0a32f812aa057055cc6a3d39bed53c6d13a69"
+hash = "9a969780abc1b6883e3ff2e1e2b87beb45562924d5710cdae57d457e55bffe3d"
 
 [[files]]
 file = "docs/TBS-mod-strategy.md"
@@ -100,6 +100,11 @@ metafile = true
 [[files]]
 file = "mods/saplanting.pw.toml"
 hash = "f5e813628cc2c02006f6c8c32ade91618f172370263dec3a6db2eb60a45f2537"
+metafile = true
+
+[[files]]
+file = "mods/simple-voice-chat.pw.toml"
+hash = "2e210dbb2eca274d176c1f5d93d41638f9826153d358e9c428f1341331bc0ea5"
 metafile = true
 
 [[files]]
