@@ -43,11 +43,6 @@ hash = "393b5b00c0c51233b2321c573f1c25aaab553d5c99ebf31a0d81352e3368e84e"
 metafile = true
 
 [[files]]
-file = "mods/essential-permissions.pw.toml"
-hash = "f9654980dd02e3b2beabb80794f3de61e6aa9d204330bf880b184290b190acd1"
-metafile = true
-
-[[files]]
 file = "mods/fabric-api.pw.toml"
 hash = "2a77dc7aade5de6d21315582c4b70db40ff2bdf746b61c10d7ad3c5be8422f75"
 metafile = true
@@ -135,6 +130,11 @@ metafile = true
 [[files]]
 file = "mods/universal-bone-meal.pw.toml"
 hash = "e6f700c0cae5f9432df4edd14e66f2e65dd12ab3380f48dc702e17da2fcbfa73"
+metafile = true
+
+[[files]]
+file = "mods/vanilla-permissions.pw.toml"
+hash = "69208ee3e357483ac7cea9bc904d91dfadfb263bab88660f2024d43daa8419b0"
 metafile = true
 
 [[files]]

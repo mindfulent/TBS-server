@@ -24,7 +24,7 @@ Initial pack. Minecraft **26.1.2**, Fabric loader **0.19.2**, packwiz format `pa
 
 ### Tier S3 — Permissions & admin
 - LuckPerms
-- Essential Permissions
+- Essential Permissions (Vanilla Permissions) *(Modrinth)*
 - WorldEdit
 
 ### Tier S4 — Communication
@@ -61,3 +61,7 @@ Initial pack. Minecraft **26.1.2**, Fabric loader **0.19.2**, packwiz format `pa
 - `luckperms-placeholders` (S3) not found on CurseForge or Modrinth under that name.
   LuckPerms prefix/group data already reaches chat via Styled Chat + Text Placeholder API.
 - "Better Sleep" from the doc resolved to **Better Server Sleep** — verify behavior.
+- Essential Permissions is sourced from Modrinth — its CurseForge file blocks third-party
+  API distribution, which aborts `packwiz modrinth export`. Same jar
+  (`vanilla-permissions-0.3.6+26.1.2.jar`), so no functional difference; the server pack is
+  deployed via mrpack4server, not the CurseForge App, so CF sourcing is not required here.

@@ -23,9 +23,22 @@ both sides. See `docs/TBS-mod-strategy.md` for the full design.
 
 ## Deploy
 
+One-click deploy from the TBS project root via `server-config.py`:
+
+```bash
+python ../server-config.py deploy        # export -> SFTP upload -> restart Bloom.host
+python ../server-config.py               # interactive menu (deploy, power, backups)
+```
+
+It exports this pack, uploads the `.mrpack` to Bloom.host as `local.mrpack`, removes any
+remote `modpack-info.json` so mrpack4server uses the local file, then restarts the server.
+Needs `TBS/.env` (copy from `TBS/.env.example`).
+
+Manual equivalent:
+
 ```bash
 ./packwiz.exe modrinth export            # produce TBS-Server-X.Y.Z.mrpack
-# -> upload to the server host running mrpack4server
+# -> upload as local.mrpack to the host running mrpack4server
 ```
 
 ## Build / maintenance
