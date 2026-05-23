@@ -65,7 +65,7 @@ for 26.1.2.
 See `CHANGELOG.md` for the exact resolved state of every mod and `docs/TBS-mod-strategy.md`
 for the full design rationale.
 
-- **Tier S1 — Performance core:** Fabric API, Lithium, Krypton, FerriteCore, C2ME, Chunky
+- **Tier S1 — Performance core:** Fabric API, Lithium, Krypton, FerriteCore, C2ME, Chunky, Voxy WorldGen
 - **Tier S2 — Observability & operations:** Spark, Connectivity, Ledger
 - **Tier S3 — Permissions & admin:** LuckPerms, Essential Permissions, WorldEdit
 - **Tier S4 — Communication:** Text Placeholder API, Styled Chat

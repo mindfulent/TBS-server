@@ -2,6 +2,38 @@
 
 All notable changes to the TBS-Server modpack.
 
+## [1.0.6] — 2026-05-22
+
+Adds passive chunk pre-generation. Voxy WorldGen runs server-side and
+generates chunks ahead of where players are travelling, so the server stops
+stuttering when someone walks toward unexplored terrain.
+
+### Added — Tier S1 (Performance core)
+- **Voxy WorldGen** `Voxy World Gen V2-26.1.2-2.2.4.jar` *(Modrinth `xT0lnNE9`)*
+  — passive chunk pre-generator. `side = "both"` in the pack manifest and
+  `environment = "*"` in `fabric.mod.json`, but JAR inspection confirms it
+  registers no blocks / items / entities / block-entity types — so the
+  Lootr-style registry-sync break (v1.0.5) cannot recur here. Its networking
+  surface is Fabric opt-in custom payloads (`HandshakePayload`, `LODDataPayload`)
+  on the `voxyworldgenv2` channel; vanilla clients never subscribe so the
+  server never sends to them.
+
+### Notes — integration runs in dormant mode
+- Voxy WorldGen's headline feature is feeding LOD data to client-side **Voxy**
+  for far-distance rendering, which requires Voxy on the server side too.
+  Voxy hard-depends on Sodium 0.8.9–0.8.11, and Sodium's
+  `environment = "client"` blocks dedicated-server load — so the integration
+  chain is mechanically unreachable on stock packwiz/Fabric. We ship
+  voxy-worldgen alone; boot log confirms `voxy not present, integration
+  disabled`. The mod still provides passive pre-gen value. TBS-Client's
+  existing Voxy renders visited far chunks client-side, unchanged.
+
+### Validation
+- LocalServer boot test (TBS-server staged into LocalServer via
+  `mrpack4server.jar` + JDK 25): reached `Done (0.656s)! For help, type "help"`,
+  voxy-worldgen initialized, zero `voxyworldgenv2:`-namespaced registry
+  entries observed in boot log.
+
 ## [1.0.5] — 2026-05-22
 
 Two hotfixes:
