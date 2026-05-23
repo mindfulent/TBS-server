@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "9b2e1d08773d0dbce7947ec5ff3a8e842c8b3f89fdf9b3bf4338cd3b9ac580e5"
+hash = "b07d3cc84bb925c6a8d1f84050098896946d99617f3b88ae833b945caf35c9a0"
 
 [[files]]
 file = "README.md"
@@ -10,7 +10,7 @@ hash = "1efbad5f993bc49c1bfe4090a419ed7c722494bec46aef3d2628f2796ac10f1e"
 
 [[files]]
 file = "docs/MOD_LIST.md"
-hash = "0c4411ee77acafbd3e8934f90475d6ebeda6a67dd9bb587c7d0d0319eece717d"
+hash = "560518d392f5172fbc8917183388f50be29320e8cd4ad1ff77cb74f85bf80a96"
 
 [[files]]
 file = "docs/TBS-mod-strategy.md"
@@ -132,11 +132,6 @@ hash = "21aa0f66659be1a33ac4f2b45123bb3f01ee8e7a5dc96579376d9bcd15d61ec2"
 metafile = true
 
 [[files]]
-file = "mods/lootr.pw.toml"
-hash = "121dde2e965c0e757cd0a09a883dddac9ba39ce0ce8a1d3fd5404c46ec87e411"
-metafile = true
-
-[[files]]
 file = "mods/luckperms.pw.toml"
 hash = "4105cf78911404927408547b052f8450469a108bdb525db0fb68335330872c0b"
 metafile = true
@@ -187,8 +182,9 @@ hash = "9e2b1d39430e0de7614f28bcc6a1e3331bf492f61f8892e669745191be7db8b6"
 metafile = true
 
 [[files]]
-file = "mods/streamcraft-0.8.22+mc26.1.2.jar"
-hash = "c18c802289ba5da32b1a60ad0579c8d78056ae3e2dd1a9db539061158bb5d78a"
+file = "mods/streamcraft-live.pw.toml"
+hash = "1844e24dbf5cff742920437e8f351ebc73d375f272a1b756f1c6986e79908f74"
+metafile = true
 
 [[files]]
 file = "mods/structory-towers.pw.toml"

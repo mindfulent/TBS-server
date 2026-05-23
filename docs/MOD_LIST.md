@@ -9,7 +9,7 @@ alongside `README.md` and `CHANGELOG.md`.
 - Target: **Minecraft 26.1.2 (Fabric 1.x)**
 - Pack version: see [`pack.toml`](../pack.toml)
 
-**Total:** 43 mods (S1–S8 + libs). Every mod is server-side or `both` and either
+**Total:** 42 mods (S1–S8 + libs). Every mod is server-side or `both` and either
 touches no client-visible content or shares an optional companion with TBS-Client.
 
 Reference links resolve to the project page on the listed source; CurseForge
@@ -58,7 +58,6 @@ project-ID URLs redirect to the canonical slug.
 | Mod | Side | Source | Filename |
 |---|---|---|---|
 | [Better Server Sleep](https://modrinth.com/mod/z9nwMi0g) | both | Modrinth | `better-serversleep-26.1.jar` |
-| [Lootr](https://modrinth.com/mod/EltpO5cN) | both | Modrinth | `lootr-fabric-26.1.2-1.22.36.109.jar` |
 | [FallingTree](https://www.curseforge.com/projects/349559) | both | CurseForge | `FallingTree-26.1.2-25.jar` |
 | [Saplanting](https://www.curseforge.com/projects/576864) | both | CurseForge | `saplanting-fabric-26.1.2-1.3.1.jar` |
 | [Universal Bone Meal](https://www.curseforge.com/projects/594013) | both | CurseForge | `UniversalBoneMeal-v26.1.0-mc26.1.x-Fabric.jar` |
@@ -74,13 +73,14 @@ project-ID URLs redirect to the canonical slug.
 
 | Mod | Side | Source | Filename |
 |---|---|---|---|
+| [StreamCraft Live](https://modrinth.com/mod/UUUunIAe) | both | Modrinth | `streamcraft-0.8.25+mc26.1.2.jar` |
 | [Simple Voice Chat](https://modrinth.com/mod/9eGKb6K1) | both | Modrinth | `voicechat-fabric-2.6.17+26.1.2.jar` |
 
-> **StreamCraft Live** is the second cross-side mod per
-> [`TBS-mod-strategy.md`](TBS-mod-strategy.md) but is **not** in this packwiz
-> manifest — it is shipped independently (see `../StreamCraftLive/`) and pinned
-> to the same version on TBS-Client. The `v1.0.2` release bundles
-> StreamCraft 0.8.22.
+TBS-Server tracks the **same canonical (no-suffix) StreamCraft Live jar** as
+TBS-Client's canonical pack — both pin Modrinth version `uZsk67f0`, file
+`streamcraft-0.8.25+mc26.1.2.jar`. StreamCraft Live's jar version (currently
+`0.8.25`) must stay in sync with TBS-Client; coordinate bumps as a synchronized
+release of both packs.
 
 ## Tier S8 — Worldgen content (added v1.0.4)
 

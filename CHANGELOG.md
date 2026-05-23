@@ -2,6 +2,51 @@
 
 All notable changes to the TBS-Server modpack.
 
+## [1.0.5] — 2026-05-22
+
+Two hotfixes:
+
+1. **Restores vanilla-client compatibility.** v1.0.4 (and earlier) shipped Lootr
+   `1.22.36.109` in Tier S5 under the "vanilla-packet-only" classification from
+   `TBS-mod-strategy.md`. That classification turned out to be wrong for this
+   Fabric port: Lootr registers ~27 custom registry entries (block-entity types
+   for personalised loot chests, container types, etc.) and declares them as
+   `side = "both"`. During the login handshake the server transmits its registry
+   and a vanilla / TBS-Client connection rejects with **"Received 27 registry
+   entries that are unknown to this client. … namespaces may be related: lootr"**.
+   Lootr cannot be downgraded to `side = "server"` either — the mod requires
+   client-side registration. The only safe fix is removal.
+2. **Re-syncs StreamCraft Live with TBS-Client.** Replaces the bundled WIP
+   `streamcraft-0.8.22+mc26.1.2.jar` loose override with the published Modrinth
+   metafile pinning **0.8.25**, matching TBS-Client v1.1.4. Same canonical
+   no-suffix jar (Modrinth version `uZsk67f0`, file
+   `streamcraft-0.8.25+mc26.1.2.jar`); on Bloom.host the no-suffix jar is what
+   gets deployed.
+
+### Removed
+- **Lootr** `1.22.36.109` *(Modrinth `EltpO5cN`)* — broke the vanilla-client
+  contract (see above). Personal-loot gameplay feature is lost; a Polymer-based
+  per-player-loot alternative would be the right re-add path if one ships for
+  26.1.2. `TBS-mod-strategy.md`'s Tier S5 entry for Lootr is now stale.
+
+### Changed
+- **StreamCraft Live** — `streamcraft-0.8.22+mc26.1.2.jar` (bundled loose jar)
+  → `streamcraft-live.pw.toml` referencing Modrinth `0.8.25`. The pack source
+  tree now contains zero loose jars; every entry is packwiz metadata. Matches
+  the pattern TBS-Client adopted in v1.1.2.
+
+### Deploy notes
+- **Re-import / re-deploy required.** Players who were on v1.0.4 cannot connect
+  until the server upgrades to v1.0.5; the registry mismatch is on the wire.
+- Any existing world chunks that already contain Lootr block entities will
+  read back as missing block-entity types after Lootr is removed. The vanilla
+  Minecraft server treats unknown block-entity types as no-ops and the chest
+  block underneath stays vanilla — no chunk corruption — but any dungeon chest
+  that Lootr had personalised is now a normal first-come-first-served chest.
+
+42 packwiz metadata entries (was 44 in v1.0.4 = 43 metafiles + 1 loose
+StreamCraft jar; −1 Lootr, −1 loose jar, +1 StreamCraft metafile).
+
 ## [1.0.4] — 2026-05-22
 
 Adds **Tier S8 — Worldgen content**: 16 server-only worldgen mods carried over
