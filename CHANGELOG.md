@@ -2,6 +2,27 @@
 
 All notable changes to the TBS-Server modpack.
 
+## [1.0.3] — 2026-05-22
+
+Documentation-only release. No mod additions, removals, or version bumps — the
+pack contents are byte-identical to v1.0.2.
+
+### Added
+- **`docs/MOD_LIST.md`** — full packwiz-entry reference: every mod grouped by
+  tier (S1–S7) with side, source (CurseForge / Modrinth), project-page link,
+  and filename. Mirrors the doc added to TBS-Client and makes the pack's
+  vanilla-client contract auditable at a glance.
+
+### Changed
+- **`README.md`** — replaced the `./packwiz.exe` command examples with the
+  cross-platform `packwiz` invocation (matches the bare-binary convention
+  now that maintainers can install packwiz natively on macOS / Linux via
+  `brew install go && go install github.com/packwiz/packwiz@latest`).
+  Added an "Installing packwiz" callout documenting the macOS / Linux install
+  path and the still-checked-in `packwiz.exe` for Windows.
+
+27 packwiz metadata entries (unchanged from v1.0.2).
+
 ## [1.0.2] — 2026-05-20
 
 ### Changed

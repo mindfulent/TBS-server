@@ -39,18 +39,23 @@ Needs `TBS/.env` (copy from `TBS/.env.example`).
 Manual equivalent:
 
 ```bash
-./packwiz.exe modrinth export            # produce TBS-Server-X.Y.Z.mrpack
+packwiz modrinth export            # produce TBS-Server-X.Y.Z.mrpack
 # -> upload as local.mrpack to the host running mrpack4server
 ```
 
 ## Build / maintenance
 
 ```bash
-./packwiz.exe cf install <mod-slug> -y   # add a mod from CurseForge (preferred)
-./packwiz.exe mr install <mod-slug> -y   # Modrinth fallback (no CF 26.1.2 build)
-./packwiz.exe update --all               # update every mod
-./packwiz.exe refresh                     # rebuild index.toml after manual edits
+packwiz cf install <mod-slug> -y   # add a mod from CurseForge (preferred)
+packwiz mr install <mod-slug> -y   # Modrinth fallback (no CF 26.1.2 build)
+packwiz update --all               # update every mod
+packwiz refresh                     # rebuild index.toml after manual edits
 ```
+
+> **Installing packwiz.** Requires the [packwiz](https://packwiz.infra.link/) CLI on `PATH`.
+> macOS / Linux: `brew install go && go install github.com/packwiz/packwiz@latest`
+> (ensure `~/go/bin` is on `PATH`). Windows: a prebuilt `packwiz.exe` is checked in at the
+> repo root — invoke it as `./packwiz.exe …` in place of `packwiz …` below.
 
 CurseForge is always tried first; Modrinth is used only when a mod has no CurseForge build
 for 26.1.2.

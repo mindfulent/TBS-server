@@ -2,11 +2,15 @@ hash-format = "sha256"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "4287d7406c4ca3a599b10b448ee1449c663681ea58b5ca10320d91c7bc67715f"
+hash = "68a9318f3eee2de0b164ef5945508ebe8f832118978146e489662867bb0fcc1c"
 
 [[files]]
 file = "README.md"
-hash = "9a969780abc1b6883e3ff2e1e2b87beb45562924d5710cdae57d457e55bffe3d"
+hash = "e103418c72194464127796f168959fd7d3a543f9684cba1de1c4f2bfdeffbc2d"
+
+[[files]]
+file = "docs/MOD_LIST.md"
+hash = "ee9b5ef1079018e6cd2d35e3e5fe70e596005e2d69f3a31e0af28f8879d7cdf5"
 
 [[files]]
 file = "docs/TBS-mod-strategy.md"
