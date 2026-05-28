@@ -2,6 +2,31 @@
 
 All notable changes to the TBS-Server modpack.
 
+## [1.1.7] — 2026-05-28
+
+**Version-coupling policy change.** TBS-Client and TBS-Server were previously
+versioned independently. From this release forward, both packs ship in lockstep —
+every future bump to either pack is a synchronized bump of both. This release
+jumps the server from `1.0.6` to `1.1.7` to align with TBS-client's current
+`1.1.7`. See parent `TBS/CLAUDE.md` for the updated policy.
+
+**Updated:**
+- **StreamCraft Live** `0.8.25+mc26.1.2` → `0.9.9+mc26.1.2`. Synchronized with TBS-client
+  v1.1.7. Brings in "the Adi branch" rollup covering everything between v0.8.25 and v0.9.9.
+
+  Server-side relevance:
+  - `PROTOCOL_VERSION` unchanged at 5 — v0.9.9 server accepts any v0.8.x or v0.9.x client.
+  - Late-joining viewers now reliably receive desktop-audio subscription on connect
+    (v0.9.5 `SetSubscribedRequest` per pre-existing publication, server-side path).
+  - Screen-share token-handshake path is unchanged; the v0.9.8 race fix is client-side.
+
+  Client-visible benefits (TBS-client players) include the new Windows Media Foundation
+  webcam shim, Windows Graphics Capture screen-share, Display Block crafting recipe,
+  Display Block source-selector fix, and a new in-mod Support + Backers screen.
+  See TBS-client `CHANGELOG.md` v1.1.7 for the full list.
+
+No other mod added, removed, or updated.
+
 ## [1.0.6] — 2026-05-22
 
 Adds passive chunk pre-generation. Voxy WorldGen runs server-side and
